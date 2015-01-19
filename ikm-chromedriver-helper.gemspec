@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Chromedriver::Helper::VERSION
   s.authors     = ["Mike Dalessio"]
   s.email       = ["mike@csa.net"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/a2ikm/chromedriver-helper"
   s.summary     = "Easy installation and use of chromedriver, the Chromium project's selenium webdriver adapter."
   s.description = "Easy installation and use of chromedriver, the Chromium project's selenium webdriver adapter."
 
