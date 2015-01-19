@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "chromedriver/helper/version"
 
 Gem::Specification.new do |s|
-  s.name        = "chromedriver-helper"
+  s.name        = "ikm-chromedriver-helper"
   s.version     = Chromedriver::Helper::VERSION
   s.authors     = ["Mike Dalessio"]
   s.email       = ["mike@csa.net"]
