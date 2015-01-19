@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Mike Dalessio"]
   s.email       = ["mike@csa.net"]
   s.homepage    = "https://github.com/a2ikm/chromedriver-helper"
-  s.summary     = "Easy installation and use of chromedriver, the Chromium project's selenium webdriver adapter."
-  s.description = "Easy installation and use of chromedriver, the Chromium project's selenium webdriver adapter."
+  s.summary     = "Easy installation and use of chromedriver, the Chromium project's selenium webdriver adapter. Forked from chromedriver-helper."
+  s.description = "Easy installation and use of chromedriver, the Chromium project's selenium webdriver adapter. Forked from chromedriver-helper."
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
