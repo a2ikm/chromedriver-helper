@@ -16,7 +16,7 @@ module Chromedriver
       url = download_url
       filename = File.basename url
       Dir.chdir platform_install_dir do
-        system "rm #{filename}"
+        system "rm #{filename}" if File.exists? filename
         system("wget -c -O #{filename} #{url}") || system("curl -C - -o #{filename} #{url}")
         raise "Could not download #{url}" unless File.exists? filename
         system "unzip -o #{filename}"
