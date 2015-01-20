@@ -3,6 +3,7 @@ require "chromedriver/helper/google_code_parser"
 require 'fileutils'
 require 'rbconfig'
 require 'download'
+require 'zip'
 
 module Chromedriver
   class Helper
@@ -20,7 +21,7 @@ module Chromedriver
         system "rm #{filename}" if File.exists? filename
         Download.file url, filename
         raise "Could not download #{url}" unless File.exists? filename
-        system "unzip -o #{filename}"
+        unzip filename
       end
       raise "Could not unzip #{filename} to get #{binary_path}" unless File.exists? binary_path
     end
@@ -63,5 +64,14 @@ module Chromedriver
       end
     end
 
+    private
+
+    def unzip filename
+      Zip::File.open(filename) do |zip_file|
+        zip_file.each do |entry|
+          entry.extract { true }
+        end
+      end
+    end
   end
 end

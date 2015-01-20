@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "nokogiri"
   s.add_runtime_dependency "version_sorter"
   s.add_runtime_dependency "download"
+  s.add_runtime_dependency "rubyzip"
 end
