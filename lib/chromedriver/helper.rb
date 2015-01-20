@@ -2,6 +2,7 @@ require "chromedriver/helper/version"
 require "chromedriver/helper/google_code_parser"
 require 'fileutils'
 require 'rbconfig'
+require 'download'
 
 module Chromedriver
   class Helper
@@ -17,7 +18,7 @@ module Chromedriver
       filename = File.basename url
       Dir.chdir platform_install_dir do
         system "rm #{filename}" if File.exists? filename
-        system("wget -c -O #{filename} #{url}") || system("curl -C - -o #{filename} #{url}")
+        Download.file url, filename
         raise "Could not download #{url}" unless File.exists? filename
         system "unzip -o #{filename}"
       end

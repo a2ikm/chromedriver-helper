@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake"
   s.add_runtime_dependency "nokogiri"
   s.add_runtime_dependency "version_sorter"
+  s.add_runtime_dependency "download"
 end
